@@ -28,20 +28,23 @@ public class Runner {
 		
 		// Random integer between 1(inclusive) and 100 (exclusive)
 		Random random = new Random();
-        int Low = 1;
+        int Low = -11;
         int High = 100;
-                
-        int twoDm[][]= new int[7][5];
+        int max_i=1;
+        int max_j=1;
         
-        for(int i=0;i<7;i++) {
-            for(int j=0;j<5;j++) {
+        int twoDm[][]= new int[max_i][max_j];
+        
+        for(int i=0;i<twoDm.length;i++) {
+            for(int j=0;j<twoDm[0].length;j++) {
                 twoDm[i][j]=random.nextInt(High-Low) + Low;        
             }
         }
         for(int[] row : twoDm) {
             printRow(row);
         }
-        System.out.println("Min = " + object.getMinValue(twoDm));
+        System.out.println("Min Prev = " + object.getMinValue(object.initArray()));
+        System.out.println("Min Random = " + object.getMinValue(twoDm));
         System.out.println("BankDeposit = " + object.calculateBankDeposit(10).toString());
 		
 

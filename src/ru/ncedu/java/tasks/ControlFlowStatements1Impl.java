@@ -66,7 +66,7 @@ public class ControlFlowStatements1Impl implements ControlFlowStatements1 {
 		
 		for (int i = 0; i < array.length; i++)
 		{
-			for (int j = 0; j < array[j].length; j++)
+			for (int j = 0; j < array[0].length; j++)
 			{
 				if(array[i][j] < min)
 				{
