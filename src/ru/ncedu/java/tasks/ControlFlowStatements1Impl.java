@@ -81,7 +81,20 @@ public class ControlFlowStatements1Impl implements ControlFlowStatements1 {
 	@Override
 	public BankDeposit calculateBankDeposit(double P) {
 		// TODO Auto-generated method stub
-		return null;
+		int treshold = 5000;
+		double gain = 1.0 + P / 100 ;
+		
+		BankDeposit bankDeposit = new BankDeposit();
+		
+		bankDeposit.amount = 1000;
+		
+		while (bankDeposit.amount <= treshold)
+		{
+			bankDeposit.amount *= gain;
+			bankDeposit.years++;
+		}
+		
+		return bankDeposit;
 	}
 
 }

@@ -42,6 +42,7 @@ public class Runner {
             printRow(row);
         }
         System.out.println("Min = " + object.getMinValue(twoDm));
+        System.out.println("BankDeposit = " + object.calculateBankDeposit(10).toString());
 		
 
 	}
