@@ -42,6 +42,9 @@ public class Runner {
         System.out.println("MPI Prev = " + object.getMaxProductIndex(object.initArray()));
         System.out.println("MPI Random = " + object.getMaxProductIndex(twoDm));
         
+        // Да это операция взятия остатка от деления!
+        System.out.println(object.calculateLineSegment(5, 2));
+        
 		
 
 	}

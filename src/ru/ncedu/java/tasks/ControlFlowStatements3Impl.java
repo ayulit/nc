@@ -127,7 +127,19 @@ public class ControlFlowStatements3Impl implements ControlFlowStatements3 {
 	@Override
 	public float calculateLineSegment(float A, float B) {
 		// TODO Auto-generated method stub
-		return 0;
+		float delta = A - B;
+				
+		if (delta < 0)
+		{
+			return A;
+		}
+		
+		while(delta >= B)
+		{
+			delta -= B;
+		}		
+		
+		return delta;
 	}
 
 }
