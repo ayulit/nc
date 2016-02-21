@@ -22,7 +22,19 @@ public class ControlFlowStatements3Impl implements ControlFlowStatements3 {
 	@Override
 	public double getFunctionValue(double x) {
 		// TODO Auto-generated method stub
-		return 0;
+		if (x<=0) 
+		{
+			return -x;
+		}
+		else if (x > 0 && x < 2)
+		{
+			return x*x;
+		}
+		else
+		{
+			return 4;
+		}
+		
 	}
 
 	/* (non-Javadoc)
@@ -63,7 +75,17 @@ public class ControlFlowStatements3Impl implements ControlFlowStatements3 {
 	@Override
 	public long[][] initArray() {
 		// TODO Auto-generated method stub
-		return null;
+		long[][] array = new long[8][5];
+		
+		for (int i = 0; i < array.length; i++)
+		{
+			for (int j = 0; j < array[j].length; j++)
+			{
+				array[i][j] = (long) Math.pow(Math.abs(i-j), 5);
+			}	
+		}
+		
+		return array;		
 	}
 
 	/* (non-Javadoc)
@@ -72,7 +94,31 @@ public class ControlFlowStatements3Impl implements ControlFlowStatements3 {
 	@Override
 	public int getMaxProductIndex(long[][] array) {
 		// TODO Auto-generated method stub
-		return 0;
+		int index = 0;		
+		long maxProduct = getProduct(array[index]);		
+		long product = -1 ;
+		
+		for (int i = 1; i < array.length; i++)
+		{
+			product = getProduct(array[i]);			
+			if (product > maxProduct)
+			{
+				maxProduct = product;
+				index = i;
+			}
+		}	
+		
+		return index;
+	}
+
+	private long getProduct(long[] row) {
+		// TODO Auto-generated method stub
+		long product = 1 ;
+		for (int i = 0; i < row.length; i++)
+		{
+			product *= Math.abs(row[i]);
+		}		
+		return product;
 	}
 
 	/* (non-Javadoc)
