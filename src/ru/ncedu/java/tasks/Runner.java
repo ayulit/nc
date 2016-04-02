@@ -64,7 +64,8 @@ public class Runner {
 		
 		System.out.println("-------------- norm --------------------");
 		
-		
+		ArrayVector decart = new ArrayVectorImpl(3,4);
+		System.out.println("||a||=" + decart.getNorm()); // 5.0
 		
 
 	}

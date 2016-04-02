@@ -144,7 +144,7 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public double getNorm() {
 		// TODO Auto-generated method stub
-		return 0;
+		return Math.sqrt(this.scalarMult(this));
 	}
 
 }
