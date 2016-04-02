@@ -14,31 +14,32 @@ public class Runner {
 
 		dude.setFirstName("Иван");
 		dude.setLastName("Кадило");		
-		System.out.println(dude.getFullName());
-		System.out.println(dude.getSalary());
-		System.out.println(dude.getManagerName());
+		System.out.println("ФИО сотрудника:" + dude.getFullName());
+		System.out.println("ЗП сотрудника:" + dude.getSalary());
+		System.out.println("ФИО менеджера:" + dude.getManagerName());
 				
 		Employee boss = new EmployeeImpl("отец","Фотий");
-		System.out.println(boss.getFullName());
-		System.out.println(boss.getSalary());
+		System.out.println("ФИО менеджера:" + boss.getFullName());
+		System.out.println("ЗП менеджера сотрудника:" + boss.getSalary());
 		boss.increaseSalary(500);		
-		System.out.println(boss.getSalary());
+		System.out.println("ЗП менеджера повысилась:" + boss.getSalary());
 		
 		dude.setManager(boss); // назначим менеджера
-		System.out.println(dude.getManagerName()); // кто босс? отец Фотий
+        // кто босс? отец Фотий
+		System.out.println("ФИО менеджера:" + dude.getManagerName());
 		
 		// кто менеджер босса? No manager
-		System.out.println(boss.getManagerName());		
+		System.out.println("ФИО менеджера менеджера:" + boss.getManagerName());		
 		// кто топ босса? он сам
-		System.out.println(boss.getTopManager().getFullName());
+		System.out.println("ФИО топа менеджера:" + boss.getTopManager().getFullName());
 		// кто топ чувака? пока босс
-		System.out.println(dude.getTopManager().getFullName());
+		System.out.println("ФИО топа сотрудника:" + dude.getTopManager().getFullName());
 				
 		// назначим менеджеру босса, т.е. будет топ
 		Employee top = new EmployeeImpl("Патриарх","Кирилл");
 		boss.setManager(top);			
 		// кто топ чувака? пока босс
-		System.out.println(dude.getTopManager().getFullName());
+		System.out.println("ФИО топа сотрудника:" + dude.getTopManager().getFullName());
 		
 		
 	}
