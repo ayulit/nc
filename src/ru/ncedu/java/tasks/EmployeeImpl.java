@@ -12,6 +12,7 @@ public class EmployeeImpl implements Employee {
 	private String employeeFirstName;
 	private String employeeLastName;
 	private int employeeSalary;
+	private Employee employeeManager;
 	
 
 	/**
@@ -21,6 +22,14 @@ public class EmployeeImpl implements Employee {
 		// TODO Auto-generated constructor stub
 		employeeSalary = 1000;
 	}
+
+	public EmployeeImpl(String firstName, String lastName) {
+		// TODO Auto-generated constructor stub
+		employeeSalary = 1000;
+		employeeFirstName = firstName;
+		employeeLastName = lastName;
+	}
+	
 
 	/**
 	 * @return Зарплата сотрудника на настоящий момент.
@@ -39,7 +48,6 @@ public class EmployeeImpl implements Employee {
 	public void increaseSalary(int value) {
 		// TODO Auto-generated method stub
 		employeeSalary += value;
-
 	}
 
 	/**
@@ -99,6 +107,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public void setManager(Employee manager) {
 		// TODO Auto-generated method stub
+		employeeManager = manager;
 
 	}
 

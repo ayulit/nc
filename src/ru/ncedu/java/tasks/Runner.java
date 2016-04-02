@@ -21,6 +21,10 @@ public class Runner {
 		object.increaseSalary(500);
 		
 		System.out.println(object.getSalary());
+		
+		Employee boss = new EmployeeImpl("отец","Фотий");
+		System.out.println(boss.getFullName());
+		System.out.println(boss.getSalary());
 	}
 
 }
