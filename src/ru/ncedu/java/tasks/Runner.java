@@ -16,6 +16,7 @@ public class Runner {
 		object.setLastName("Кадило");
 		
 		System.out.println(object.getFullName());
+		System.out.println(object.getSalary());
 	}
 
 }

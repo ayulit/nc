@@ -9,8 +9,9 @@ package ru.ncedu.java.tasks;
  */
 public class EmployeeImpl implements Employee {
 	
-	String employeeFirstName;
-	String employeeLastName;
+	private String employeeFirstName;
+	private String employeeLastName;
+	private int employeeSalary;
 	
 
 	/**
@@ -18,6 +19,7 @@ public class EmployeeImpl implements Employee {
 	 */
 	public EmployeeImpl() {
 		// TODO Auto-generated constructor stub
+		employeeSalary = 1000;
 	}
 
 	/**
@@ -26,7 +28,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public int getSalary() {
 		// TODO Auto-generated method stub
-		return 0;
+		return employeeSalary;
 	}
 
 	/**
