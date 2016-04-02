@@ -10,21 +10,24 @@ public class Runner {
 		System.out.println("Hello, World!");
 		// Такой метод создания экземпляра дан в Task Description 
 		// упражнения Control Flow Statements 1
-		Employee object = new EmployeeImpl();
+		Employee dude = new EmployeeImpl();
 
-		object.setFirstName("Иван");
-		object.setLastName("Кадило");
+		dude.setFirstName("Иван");
+		dude.setLastName("Кадило");
 		
-		System.out.println(object.getFullName());
-		System.out.println(object.getSalary());
+		System.out.println(dude.getFullName());
+		System.out.println(dude.getSalary());
+		System.out.println(dude.getManagerName());
 		
-		object.increaseSalary(500);
-		
-		System.out.println(object.getSalary());
+		dude.increaseSalary(500);		
+		System.out.println(dude.getSalary());
 		
 		Employee boss = new EmployeeImpl("отец","Фотий");
 		System.out.println(boss.getFullName());
-		System.out.println(boss.getSalary());
+		System.out.println(boss.getSalary());		
+		dude.setManager(boss); // назначим менеджера
+		System.out.println(dude.getManagerName()); // кто босс?
+		
 	}
 
 }

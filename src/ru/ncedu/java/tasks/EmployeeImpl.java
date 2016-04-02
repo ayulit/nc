@@ -15,17 +15,15 @@ public class EmployeeImpl implements Employee {
 	private Employee employeeManager;
 	
 
-	/**
-	 * 
-	 */
 	public EmployeeImpl() {
 		// TODO Auto-generated constructor stub
 		employeeSalary = 1000;
+		employeeManager = null;
 	}
-
+	
 	public EmployeeImpl(String firstName, String lastName) {
 		// TODO Auto-generated constructor stub
-		employeeSalary = 1000;
+		this();
 		employeeFirstName = firstName;
 		employeeLastName = lastName;
 	}
@@ -118,7 +116,10 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public String getManagerName() {
 		// TODO Auto-generated method stub
-		return null;
+		if (employeeManager == null){
+			return "No manager";
+		}
+		return employeeManager.getFullName();
 	}
 
 	/**
