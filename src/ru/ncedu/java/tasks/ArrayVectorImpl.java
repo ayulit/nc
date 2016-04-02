@@ -1,6 +1,8 @@
 package ru.ncedu.java.tasks;
 
 public class ArrayVectorImpl implements ArrayVector {
+	
+	private double[] vec;
 
 	public ArrayVectorImpl() {
 		// TODO Auto-generated constructor stub
@@ -13,13 +15,13 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public void set(double... elements) {
 		// TODO Auto-generated method stub
-
+		vec = elements;
 	}
 
 	@Override
 	public double[] get() {
 		// TODO Auto-generated method stub
-		return null;
+		return vec;
 	}
 
 	@Override
