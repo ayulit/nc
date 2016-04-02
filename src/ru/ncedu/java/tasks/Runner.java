@@ -15,7 +15,8 @@ public class Runner {
 		
 		vect.set(-1,2,3,4,5);
 				
-		System.out.println(Arrays.toString(vect.get()));
+		System.out.println("vector: " + Arrays.toString(vect.get()));
+		System.out.println("size: " + vect.getSize());
 
 	}
 
