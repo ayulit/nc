@@ -26,6 +26,9 @@ public class Runner {
 		
 		System.out.println("max = " + vect.getMax());
 		System.out.println("min = " + vect.getMin());
+		
+		vect.sortAscending();
+		System.out.println("sort: " + Arrays.toString(vect.get()));
 
 	}
 

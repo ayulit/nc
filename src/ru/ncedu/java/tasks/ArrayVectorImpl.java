@@ -85,7 +85,7 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public void sortAscending() {
 		// TODO Auto-generated method stub
-
+		Arrays.sort(vec);
 	}
 
 	@Override
