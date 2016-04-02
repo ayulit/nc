@@ -36,7 +36,7 @@ public class ArrayVectorImpl implements ArrayVector {
 	public void set(int index, double value) {
 		// TODO Auto-generated method stub		
 		if (index>=0)  {
-			if (index > (this.getSize()-1)){
+			if (index > (vec.length - 1)){
 				
 				double[] tempVec = Arrays.copyOf(vec, index + 1);				
 				vec = tempVec;
@@ -56,14 +56,30 @@ public class ArrayVectorImpl implements ArrayVector {
 
 	@Override
 	public double getMax() {
-		// TODO Auto-generated method stub
-		return 0;
+		// TODO Auto-generated method stub		
+		double max = vec[0];
+		
+		for (int i = 1; i < vec.length; i++) {
+		    if (vec[i] > max) {
+		        max = vec[i];
+		    }
+		}
+		
+		return max;
 	}
 
 	@Override
 	public double getMin() {
 		// TODO Auto-generated method stub
-		return 0;
+		double min = vec[0];
+		
+		for (int i = 1; i < vec.length; i++) {
+		    if (vec[i] < min) {
+		        min = vec[i];
+		    }
+		}
+		
+		return min;
 	}
 
 	@Override

@@ -22,7 +22,10 @@ public class Runner {
 		System.out.println("vector: " + Arrays.toString(vect.get()));
 		System.out.println("size: " + vect.getSize());
 		
-		System.out.println("element = " + vect.get(100));
+		System.out.println("element = " + vect.get(0));
+		
+		System.out.println("max = " + vect.getMax());
+		System.out.println("min = " + vect.getMin());
 
 	}
 
