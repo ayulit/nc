@@ -91,6 +91,10 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public void mult(double factor) {
 		// TODO Auto-generated method stub
+		
+		for (int i = 0; i < vec.length; i++) {
+		    vec[i] *= factor;
+		}
 
 	}
 

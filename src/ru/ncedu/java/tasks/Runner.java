@@ -29,6 +29,9 @@ public class Runner {
 		
 		vect.sortAscending();
 		System.out.println("sort: " + Arrays.toString(vect.get()));
+		
+		vect.mult(2.0); // let's multiply by two
+		System.out.println("multiply: " + Arrays.toString(vect.get()));
 
 	}
 
