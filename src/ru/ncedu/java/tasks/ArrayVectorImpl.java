@@ -10,16 +10,14 @@ public class ArrayVectorImpl implements ArrayVector {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public ArrayVectorImpl(double... elements) {
+		// TODO Auto-generated constructor stub
+		vec = elements;
+	}
+	
 	public ArrayVector clone() {
 		
-		// ArrayVector copy = (ArrayVector) vec.clone();
-		
-		double[] tempVec = vec.clone();
-		
-		ArrayVector copy = new ArrayVectorImpl();
-		
-		copy.set(tempVec);
-		
+		ArrayVector copy = new ArrayVectorImpl(vec.clone());	
 		return copy;
 	}
 
