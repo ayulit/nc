@@ -108,7 +108,18 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public ArrayVector sum(ArrayVector anotherVector) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		if (anotherVector != null) {
+			
+			int minLen = Math.min(vec.length, anotherVector.getSize());
+			
+			for (int i = 0; i < minLen; i++) {
+				
+				vec[i] += anotherVector.get(i);			    
+			}	
+		}
+		
+		return this;
 	}
 
 	@Override
