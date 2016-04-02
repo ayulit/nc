@@ -21,6 +21,8 @@ public class Runner {
 		vect.set(0, 10);
 		System.out.println("vector: " + Arrays.toString(vect.get()));
 		System.out.println("size: " + vect.getSize());
+		
+		System.out.println("element = " + vect.get(100));
 
 	}
 

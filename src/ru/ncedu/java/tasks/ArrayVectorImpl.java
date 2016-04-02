@@ -51,7 +51,7 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public double get(int index) throws ArrayIndexOutOfBoundsException {
 		// TODO Auto-generated method stub
-		return 0;
+		return vec[index];
 	}
 
 	@Override
