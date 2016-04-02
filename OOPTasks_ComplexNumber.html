@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>1-OOPTasks ComplexNumber</title>
+	</head>
+	<body>
+		<h3>GOALS</h3>
+		<ul>
+		  <li>To learn OOP basics: basic principles of writing a class, getters/setters, <code>this</code> keyword.</li>
+		  <li>To get familiar with some methods of {@link Object} and with {@link Comparable} interface.</li>
+		  <li>To be able to use some java.lang and java.itil API: {@link String}, {@link Double}, {@link Arrays}.</li>
+		  </ul>
+		  <p/>
+		  TASK<br/>
+		  Implement a class storing a single complex number with basic mathematical operations on it.<br/>
+		  Instances of the class must be comparable, cloneable and representable as String (in the common format).
+		  <p/>
+		  REQUIREMENTS<ul>
+		  <li>The complex number consists of two components: real part (re) and imaginary part (im).
+		    They should be stored as private fields (members of the class) of type double or Double.
+		    After instantiation of the number with default constructor both re and im must be equal to 0.</li>
+		  <li>Every math operation on the number (add, negate, multiply methods) should change the state of this object 
+		    not creating a new object (this requirement is intended to save memory and to lower calculation time). 
+		    For a caller's convenience, all these methods (math operations) return this object itself.</li>
+		  <li>The common requirement for any task (to check it online) is to declare your class as follows:<br/>
+		  <code>public class ComplexNumberImpl implements ComplexNumber {  } </code></li>
+		  </ul>
+		  <p/>
+		  NOTES<ul>
+		  <li>When coded with the methods of this interface, formulas like z = x-y^2 could look like this:<br/>
+		   <code>ComplexNumber z = x.add(y.copy().multiply(y).negate());</code><br/>
+		   where <code>x</code>, <code>y</code> are objects of type ComplexNumber.</li>
+		  <li>The task can be solved without any knowledge of Exceptions, but if you know that topic 
+		   explicit generation of {@link NumberFormatException} in {@link #set(String)} method is recommended.</li>
+		  <li>It's recommended (but not required) to have the following set of constructors:<br/>
+		    <code>public ComplexNumberImpl(double re, double im);</code><br/>
+		    <code>public ComplexNumberImpl(String value);</code><br/>
+		    <code>public ComplexNumberImpl();</code> (this no-argument constructor is required by the checking system).</li>
+		  <li>If you don't understand the mathematical meaning of the complex number you can read e.g. 
+		   <a href="http://en.wikipedia.org/wiki/Complex_number">Complex Number at Wikipedia</a>.</li>
+		  <li>A professional Java implementation of this concept can be found here:
+		   <a href="http://commons.apache.org/proper/commons-math/userguide/complex.html">Complex in Apache Commons Math</a>.</li>
+		</ul>
+	</body>
+</html>
