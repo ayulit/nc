@@ -8,6 +8,10 @@ package ru.ncedu.java.tasks;
  *
  */
 public class EmployeeImpl implements Employee {
+	
+	String employeeFirstName;
+	String employeeLastName;
+	
 
 	/**
 	 * 
@@ -41,7 +45,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public String getFirstName() {
 		// TODO Auto-generated method stub
-		return null;
+		return employeeFirstName;
 	}
 
 	/**
@@ -51,6 +55,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public void setFirstName(String firstName) {
 		// TODO Auto-generated method stub
+		employeeFirstName = firstName;
 
 	}
 
@@ -60,7 +65,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public String getLastName() {
 		// TODO Auto-generated method stub
-		return null;
+		return employeeLastName;
 	}
 
 	/**
@@ -70,6 +75,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public void setLastName(String lastName) {
 		// TODO Auto-generated method stub
+		employeeLastName = lastName;
 
 	}
 
@@ -79,7 +85,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public String getFullName() {
 		// TODO Auto-generated method stub
-		return null;
+		return employeeFirstName + " " + employeeLastName;
 	}
 
 	/**

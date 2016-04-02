@@ -8,7 +8,14 @@ public class Runner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hello, World!");
+		// Такой метод создания экземпляра дан в Task Description 
+		// упражнения Control Flow Statements 1
+		Employee object = new EmployeeImpl();
 
+		object.setFirstName("Иван");
+		object.setLastName("Кадило");
+		
+		System.out.println(object.getFullName());
 	}
 
 }
