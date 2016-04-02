@@ -32,6 +32,11 @@ public class Runner {
 		
 		vect.mult(2.0); // let's multiply by two
 		System.out.println("multiply: " + Arrays.toString(vect.get()));
+		
+		ArrayVector dopel = (ArrayVectorImpl) vect.clone();
+		dopel.mult(2.0); // let's multiply by two
+		System.out.println("original: " + Arrays.toString(vect.get()));
+		System.out.println("cloned*2: " + Arrays.toString(dopel.get()));		
 
 	}
 
