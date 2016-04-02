@@ -38,6 +38,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public void increaseSalary(int value) {
 		// TODO Auto-generated method stub
+		employeeSalary += value;
 
 	}
 

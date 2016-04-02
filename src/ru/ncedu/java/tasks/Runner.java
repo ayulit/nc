@@ -17,6 +17,10 @@ public class Runner {
 		
 		System.out.println(object.getFullName());
 		System.out.println(object.getSalary());
+		
+		object.increaseSalary(500);
+		
+		System.out.println(object.getSalary());
 	}
 
 }
