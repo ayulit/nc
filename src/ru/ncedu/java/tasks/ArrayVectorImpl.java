@@ -81,6 +81,7 @@ public class ArrayVectorImpl implements ArrayVector {
 		double min = vec[0];
 		
 		for (int i = 1; i < vec.length; i++) {
+			
 		    if (vec[i] < min) {
 		        min = vec[i];
 		    }
