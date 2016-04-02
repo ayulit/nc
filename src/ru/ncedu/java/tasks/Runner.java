@@ -41,8 +41,9 @@ public class Runner {
 		vect = vect.sum(dopel); // let's add
 		System.out.println("summed: " + Arrays.toString(vect.get()));
 		
-		System.out.println("----------------------------------");
+		System.out.println("-------------- summ --------------------");
 		
+
 		ArrayVector av1 = new ArrayVectorImpl(1,2,3);
 		ArrayVector av2 = new ArrayVectorImpl(1,2,3,4,5);
 		ArrayVector bv1 = new ArrayVectorImpl(10,20,30,40,50);
@@ -51,6 +52,17 @@ public class Runner {
 		bv1 = bv1.sum(bv2);		
 		System.out.println("av1: " + Arrays.toString(av1.get())); // 2,4,6
 		System.out.println("bv1: " + Arrays.toString(bv1.get())); // 20,40,60,40,50
+		
+		System.out.println("-------------- scalar product --------------------");
+		
+		av1.set(1,2,3);
+		bv1.set(10,20,30,40,50);
+		
+		System.out.println("*0: " + av1.scalarMult(null)); // 0.0
+		System.out.println("av1*av2: " + av1.scalarMult(av2)); // 1+4+9 = 14
+		System.out.println("bv1*bv2: " + bv1.scalarMult(bv2)); // 100,400,900,40,50 = 1400
+		
+		System.out.println("-------------- norm --------------------");
 		
 		
 		

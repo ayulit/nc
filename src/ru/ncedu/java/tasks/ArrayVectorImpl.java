@@ -125,7 +125,20 @@ public class ArrayVectorImpl implements ArrayVector {
 	@Override
 	public double scalarMult(ArrayVector anotherVector) {
 		// TODO Auto-generated method stub
-		return 0;
+		
+		double product = 0;
+		
+		if (anotherVector != null) {
+			
+			int minLen = Math.min(vec.length, anotherVector.getSize());
+			
+			for (int i = 0; i < minLen; i++) {
+				
+				product += vec[i] * anotherVector.get(i);			    
+			}	
+		}
+		
+		return product;
 	}
 
 	@Override
