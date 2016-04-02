@@ -135,7 +135,7 @@ public class EmployeeImpl implements Employee {
 	@Override
 	public Employee getTopManager() {
 		// TODO Auto-generated method stub
-		return null;
+		return (employeeManager == null) ? this : employeeManager.getTopManager();
 	}
 
 }
