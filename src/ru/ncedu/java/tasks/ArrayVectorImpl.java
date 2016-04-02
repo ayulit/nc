@@ -1,5 +1,7 @@
 package ru.ncedu.java.tasks;
 
+import java.util.Arrays;
+
 public class ArrayVectorImpl implements ArrayVector {
 	
 	private double[] vec;
@@ -32,8 +34,18 @@ public class ArrayVectorImpl implements ArrayVector {
 
 	@Override
 	public void set(int index, double value) {
-		// TODO Auto-generated method stub
-
+		// TODO Auto-generated method stub		
+		if (index>=0)  {
+			if (index > (this.getSize()-1)){
+				
+				double[] tempVec = Arrays.copyOf(vec, index + 1);				
+				vec = tempVec;
+				
+			}
+			
+			vec[index] = value;	
+			
+		}
 	}
 
 	@Override
