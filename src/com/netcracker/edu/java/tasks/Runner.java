@@ -60,7 +60,15 @@ public class Runner {
 		
 		
 		System.out.println("----------toString-----------");
-		System.out.println("zumwalt="+zumwalt.toString());
+		z.set("12.5-1.0i"); printFormatted(z);
+		zumwalt.set("+3.1-2.7i"); printFormatted(zumwalt);
+		System.out.println("zumwalt="+zumwalt.toString()); // 3.1-2.7i
+		zumwalt.set(z.toString());printFormatted(zumwalt); // 12.5-1.0i
+		
+		z.set("0.0");zumwalt.set(z.toString());System.out.println("zumwalt="+zumwalt.toString());
+		z.set("0.33333i");zumwalt.set(z.toString());System.out.println("zumwalt="+zumwalt.toString());
+		
+		
 		
 	}
 

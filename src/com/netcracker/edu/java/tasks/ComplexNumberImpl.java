@@ -136,7 +136,21 @@ public class ComplexNumberImpl implements ComplexNumber {
 	}	
 	
 	
-	
+	public String toString() {
+		
+		if (this.im == 0) {
+			// real only
+			return Double.toString(this.re);
+		}
+		else if ((this.re == 0) && (this.im != 0))
+		{
+			// image only
+			return Double.toString(this.im) + "i";
+		}
+		
+		return Double.toString(this.re) + Double.toString(this.im) + "i";	
+		
+	}
 	
 	
 	@Override
