@@ -112,6 +112,12 @@ public class Runner {
 		System.out.println("zumwalt=" + zumwalt.toString());
 		zumwalt = x.negate();
 		System.out.println("zumwalt=" + zumwalt.toString());
+		
+		System.out.println("----------Add-----------");
+		x.set("-5+6i");
+		z.set("3-2i");
+		zumwalt = x.add(z);
+		System.out.println("zumwalt=" + zumwalt.toString()); // -2+4i
 	}
 
 }
