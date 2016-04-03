@@ -1,9 +1,23 @@
 package com.netcracker.edu.java.tasks;
 
 public class ComplexNumberImpl implements ComplexNumber {
+	
+	private double re;
+	private double im;
 
 	public ComplexNumberImpl() {
 		// TODO Auto-generated constructor stub
+		re=0;
+		im=0;
+	}
+	
+	public ComplexNumberImpl(double re, double im) {
+		this.re = re;
+		this.im = im;
+	}
+	
+	public ComplexNumberImpl(String value) {
+		this();
 	}
 	
 	public ComplexNumber clone() throws CloneNotSupportedException {
