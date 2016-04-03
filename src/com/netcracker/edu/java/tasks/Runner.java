@@ -42,7 +42,8 @@ public class Runner {
 		
 		System.out.println("----------------------------");
 		
-		
+		ComplexNumber zumwalt = new ComplexNumberImpl("-5.8+6i");
+		printFormatted(zumwalt);
 	}
 
 }

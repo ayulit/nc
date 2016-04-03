@@ -17,7 +17,7 @@ public class ComplexNumberImpl implements ComplexNumber {
 	}
 	
 	public ComplexNumberImpl(String value) {
-		this();
+		this.set(value);
 	}
 	
 	public ComplexNumber clone() throws CloneNotSupportedException {
