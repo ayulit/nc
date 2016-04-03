@@ -20,11 +20,7 @@ public class ComplexNumberImpl implements ComplexNumber {
 		this.set(value);
 	}
 	
-	public ComplexNumber clone() throws CloneNotSupportedException {
-		
-		//ArrayVector copy = new ArrayVectorImpl(vec.clone());	
-		return null;
-	}
+
 
 	@Override
 	public double getRe() {
@@ -135,6 +131,14 @@ public class ComplexNumberImpl implements ComplexNumber {
 		return copyOfComplexNumber;		
 	}
 
+	public ComplexNumber clone() throws CloneNotSupportedException {					
+		return this.copy();
+	}	
+	
+	
+	
+	
+	
 	@Override
 	public int compareTo(ComplexNumber other) {
 		// TODO Auto-generated method stub

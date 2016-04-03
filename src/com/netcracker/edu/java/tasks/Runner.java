@@ -6,7 +6,7 @@ public class Runner {
 		System.out.println("z=" + z.getRe() +(z.getIm() < 0 ? "" : "+") + z.getIm() + "i" );		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 
 		System.out.println("Hello, World!");
 		
@@ -52,6 +52,15 @@ public class Runner {
 		System.out.println("'copy':Values are" + (zumwalt.equals(z)?" equal. ":" not equal. ") + 
 				           "Refs are" + ((zumwalt==z) ?" equal":" not equal. ")); //equal-not equal
 		
+		System.out.println("----------Clone-----------");
+		zumwalt.set("+4-i"); printFormatted(zumwalt);
+		z = zumwalt.clone();
+		System.out.println("'clone':Values are" + (zumwalt.equals(z)?" equal. ":" not equal. ") + 
+		           "Refs are" + ((zumwalt==z) ?" equal":" not equal. ")); //equal-not equal
+		
+		
+		System.out.println("----------toString-----------");
+		System.out.println("zumwalt="+zumwalt.toString());
 		
 	}
 
