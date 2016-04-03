@@ -1,11 +1,14 @@
 Compilation: 11733 nsec
 
 
-Test Maths (add); Mark=0; Status: Failed
-Test Maths (multiply, negate); Mark=0; Status: Failed
++Test Maths (add); Mark=0; Status: Failed
+java.lang.AssertionError: number.add(*) must change the number instead of creating a new number
 
+Test Maths (multiply, negate); Mark=0; Status: Failed
+java.lang.AssertionError: number.multiply(*) must change the number instead of creating a new number
 
 Test Maths (all operations); Mark=0; Status: Failed
+java.lang.AssertionError: number.multiply(*) must change the number instead of creating a new number
 
 +Test toString; Mark=0; Status: Failed
 org.junit.ComparisonFailure: String representation of '1+1.0i' does not match: expected:<1.0+[1.0]i> but was:<1.0+[]i>

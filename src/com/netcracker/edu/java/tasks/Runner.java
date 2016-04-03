@@ -142,6 +142,15 @@ public class Runner {
 		System.out.println("----------toString-----------");
 		x.set("1+1.0i");
 		System.out.println("x=" + x.toString()); // 1.0+1.0i 
+		
+		
+		System.out.println("----------add-----------");
+		
+		x.set("-5+6i");System.out.println("x=" + x.toString());
+		z=x.clone();
+		z.set("3-2i");System.out.println("z=" + z.toString());
+		x.add(z);
+		System.out.println("x=" + x.toString()); // -2+4i
 	}
 
 }

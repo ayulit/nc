@@ -191,8 +191,11 @@ public class ComplexNumberImpl implements ComplexNumber {
 
 	@Override
 	public ComplexNumber add(ComplexNumber arg2) {
-		// TODO Auto-generated method stub
-		return new ComplexNumberImpl(re + arg2.getRe(),im + arg2.getIm());
+		// TODO Auto-generated method stub		
+		this.re += arg2.getRe();
+		this.im += arg2.getIm();
+		
+		return this;
 	}
 
 	@Override
