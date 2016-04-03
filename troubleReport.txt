@@ -18,6 +18,7 @@ org.junit.ComparisonFailure: String representation of '1+1.0i' does not match: e
 	...
 
 
-Test equals; Mark=0; Status: Failed
-
-
++Test equals; Mark=0; Status: Failed
+java.lang.ClassCastException: com.netcracker.edu.java.tasks.ComplexNumberEtalon cannot be cast to com.netcracker.edu.java.tasks.ComplexNumberImpl
+	at com.netcracker.edu.java.tasks.ComplexNumberImpl.equals(ComplexNumberImpl.java:119)
+	at com.netcracker.edu.java.tasks.ComplexNumberTest.testEquals(ComplexNumberTest.java:111)

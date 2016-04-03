@@ -117,8 +117,8 @@ public class ComplexNumberImpl implements ComplexNumber {
 	public boolean equals(Object other){
 		
 		if ((other instanceof ComplexNumber) &&
-			(this.re == ((ComplexNumberImpl)other).re) && 
-			(this.im == ((ComplexNumberImpl)other).im))
+			(this.re == ((ComplexNumber)other).getRe()) && 
+			(this.im == ((ComplexNumber)other).getIm()))
 		{
 			return true;
 		}	 

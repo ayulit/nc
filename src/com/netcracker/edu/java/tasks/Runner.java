@@ -171,6 +171,17 @@ public class Runner {
 		x.negate();
 		System.out.println("x=" + x.toString());
 		
+		System.out.println("----------equals-----------");
+		x = new ComplexNumberImpl("-5.8+6i");
+		System.out.println("x=" + x.toString());
+		y = x;
+		System.out.println("'=':Values are" + (y.equals(x)?" equal. ":" not equal. ") + 
+		           "Refs are" + ((y==x) ?" equal":" not equal. ")); // equal-equal
+		y = x.copy();
+		System.out.println("y=" + y.toString());
+		System.out.println("'copy':Values are" + (y.equals(x)?" equal. ":" not equal. ") + 
+		           "Refs are" + ((y==x) ?" equal":" not equal. ")); //equal-not equal
+		
 		
 	}
 
