@@ -197,7 +197,14 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public ComplexNumber multiply(ComplexNumber arg2) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		double c = arg2.getRe();
+		double d = arg2.getIm();
+		
+		double x = re*c - im*d;
+		double y = im*c + re*d;
+		
+		return new ComplexNumberImpl(x,y);
 	}
 
 }

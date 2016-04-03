@@ -118,6 +118,12 @@ public class Runner {
 		z.set("3-2i");
 		zumwalt = x.add(z);
 		System.out.println("zumwalt=" + zumwalt.toString()); // -2+4i
+		
+		System.out.println("----------Multiplicity-----------");
+		zumwalt = x.multiply(z);
+		System.out.println("zumwalt=" + zumwalt.toString()); // -3+28i
+		x = zumwalt.multiply(zumwalt);
+		System.out.println("x=" + x.toString()); // -775-168i 
 	}
 
 }
