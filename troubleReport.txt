@@ -1,0 +1,21 @@
+Compilation: 11733 nsec
+
+
+Test Maths (add); Mark=0; Status: Failed
+Test Maths (multiply, negate); Mark=0; Status: Failed
+
+
+Test Maths (all operations); Mark=0; Status: Failed
+
+Test toString; Mark=0; Status: Failed
+
+org.junit.ComparisonFailure: String representation of '1+1.0i' does not match: expected:<1.0+[1.0]i> but was:<1.0+[]i>
+	at org.junit.Assert.assertEquals(Assert.java:123)
+	at com.netcracker.edu.java.tasks.ComplexNumberTest.assertToString(ComplexNumberTest.java:215)
+	at com.netcracker.edu.java.tasks.ComplexNumberTest.testToString(ComplexNumberTest.java:102)
+	...
+
+
+Test equals; Mark=0; Status: Failed
+
+
