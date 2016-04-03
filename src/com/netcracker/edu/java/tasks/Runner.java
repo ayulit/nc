@@ -18,7 +18,30 @@ public class Runner {
 		System.out.println("z is " + (z.isReal() ? "real" : "complex"));
 		z.set(5,0);
 		printFormatted(z);
-		System.out.println("z is " + (z.isReal() ? "real" : "complex"));		
+		System.out.println("z is " + (z.isReal() ? "real" : "complex"));
+		z.set("5.0"); printFormatted(z);
+		z.set("i"); printFormatted(z);
+		z.set("+i"); printFormatted(z);
+		z.set("-i"); printFormatted(z);
+		z.set("2.5i"); printFormatted(z);
+		z.set("+2.5i"); printFormatted(z);
+		z.set("-2.5i"); printFormatted(z);
+		
+		System.out.println("--------task cases---------");
+		
+		z.set("i"); printFormatted(z);
+		z.set("-3i"); printFormatted(z);
+		z.set("3"); printFormatted(z);
+				
+		System.out.println("--------general cases---------");
+		
+		z.set("-5+2i"); printFormatted(z);
+		z.set("1+i"); printFormatted(z);
+		z.set("+4-i"); printFormatted(z);
+		z.set("-4.3-i"); printFormatted(z);
+		
+		System.out.println("----------------------------");
+		
 		
 	}
 

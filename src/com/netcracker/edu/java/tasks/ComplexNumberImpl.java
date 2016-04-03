@@ -59,6 +59,60 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public void set(String value) throws NumberFormatException {
 		// TODO Auto-generated method stub
+		
+		this.re = 0;
+		this.im = 0;
+		
+		if (!value.isEmpty()) {
+
+			if (value.endsWith("i"))
+			{
+				// is complex
+				if (value.length() == 1)
+				{
+					// i
+					this.im = 1;
+				}
+				else if ((value.length() == 2) && ((value.startsWith("+")) || (value.startsWith("-"))))
+				{
+					// +i, -i
+					this.im = (value.startsWith("+")) ? 1 : -1;
+				}
+				else if ((value.indexOf('+', 1) == -1) && (value.indexOf('-', 1) == -1))
+				{
+					// image only: +234i, -3.5i,
+					this.im = Double.parseDouble(value.substring(0, value.length()-1));
+					
+				}
+				else
+				{
+					// General issue				
+					int signInd = (value.indexOf('+', 1) == -1) ? value.indexOf('-', 1) : value.indexOf('+', 1);
+					
+					// got real
+					this.re = Double.parseDouble(value.substring(0, signInd));
+										
+					String imString = value.substring(signInd, value.length()-1);
+					
+					if (imString.length() == 1) {
+						// got image: xxx+i, xxx-i 
+						this.im = (imString.equals("+")) ?  (1) : (-1);
+						
+					} 
+					else 
+					{
+						// got it
+						this.im = Double.parseDouble(imString);
+					}			
+				}			
+			}
+			else
+			{
+				// is real
+				this.re = Double.parseDouble(value);
+			}			
+			
+		}
 
 	}
 
