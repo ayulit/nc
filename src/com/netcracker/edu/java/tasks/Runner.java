@@ -124,6 +124,15 @@ public class Runner {
 		System.out.println("zumwalt=" + zumwalt.toString()); // -3+28i
 		x = zumwalt.multiply(zumwalt);
 		System.out.println("x=" + x.toString()); // -775-168i 
+		
+		System.out.println("----------Last Check-----------");
+		
+		x.set("-5+6i");
+		y.set("8-3i");
+		
+		// z = x-y^2		
+		z = x.add(y.copy().multiply(y).negate());
+		System.out.println("z=" + z.toString()); // -60+54i
 	}
 
 }
