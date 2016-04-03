@@ -186,7 +186,10 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public ComplexNumber negate() {
 		// TODO Auto-generated method stub
-		return new ComplexNumberImpl((-1.0)*this.re,(-1.0)*this.im);
+		this.re *= -1.0;
+		this.im *= -1.0;		
+		
+		return this;
 	}
 
 	@Override
@@ -205,10 +208,13 @@ public class ComplexNumberImpl implements ComplexNumber {
 		double c = arg2.getRe();
 		double d = arg2.getIm();
 		
-		double x = re*c - im*d;
-		double y = im*c + re*d;
+		double x = this.re*c - this.im*d;
+		double y = this.im*c + this.re*d;
 		
-		return new ComplexNumberImpl(x,y);
+		this.re = x;
+		this.im = y;
+		
+		return this;
 	}
 
 }

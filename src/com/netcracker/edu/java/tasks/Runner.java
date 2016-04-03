@@ -1,5 +1,7 @@
 package com.netcracker.edu.java.tasks;
 
+
+
 public class Runner {
 
 	public static void printFormatted(ComplexNumber z) {
@@ -120,10 +122,14 @@ public class Runner {
 		System.out.println("zumwalt=" + zumwalt.toString()); // -2+4i
 		
 		System.out.println("----------Multiplicity-----------");
-		zumwalt = x.multiply(z);
-		System.out.println("zumwalt=" + zumwalt.toString()); // -3+28i
-		x = zumwalt.multiply(zumwalt);
-		System.out.println("x=" + x.toString()); // -775-168i 
+		x = new ComplexNumberImpl("-2+4i");
+		z = new ComplexNumberImpl("4-13i");
+
+		System.out.println("x=" + x.toString()); // -2+4i
+		System.out.println("z=" + z.toString()); // 4-13i
+		
+		x.multiply(z);		
+		System.out.println("x=" + x.toString()); // 44+42i
 		
 		System.out.println("----------Last Check-----------");
 		
@@ -151,6 +157,21 @@ public class Runner {
 		z.set("3-2i");System.out.println("z=" + z.toString());
 		x.add(z);
 		System.out.println("x=" + x.toString()); // -2+4i
+		
+		System.out.println("----------multipy-----------");
+		x.set("-5+6i");
+		z.set("3-2i");
+		x.multiply(z);
+		System.out.println("x=" + x.toString()); // -3+28i
+		x.multiply(x);
+		System.out.println("x=" + x.toString()); // -775-168i 
+		
+		System.out.println("----------negate-----------");
+		System.out.println("x=" + x.toString());		
+		x.negate();
+		System.out.println("x=" + x.toString());
+		
+		
 	}
 
 }

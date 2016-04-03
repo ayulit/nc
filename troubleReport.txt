@@ -4,10 +4,10 @@ Compilation: 11733 nsec
 +Test Maths (add); Mark=0; Status: Failed
 java.lang.AssertionError: number.add(*) must change the number instead of creating a new number
 
-Test Maths (multiply, negate); Mark=0; Status: Failed
++Test Maths (multiply, negate); Mark=0; Status: Failed
 java.lang.AssertionError: number.multiply(*) must change the number instead of creating a new number
 
-Test Maths (all operations); Mark=0; Status: Failed
++Test Maths (all operations); Mark=0; Status: Failed
 java.lang.AssertionError: number.multiply(*) must change the number instead of creating a new number
 
 +Test toString; Mark=0; Status: Failed
