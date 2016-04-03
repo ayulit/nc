@@ -107,6 +107,11 @@ public class Runner {
 			System.out.println(a[j].toString());
 		}
 		
+		System.out.println("----------Negate-----------");
+		System.out.println("x=" + x.toString());
+		System.out.println("zumwalt=" + zumwalt.toString());
+		zumwalt = x.negate();
+		System.out.println("zumwalt=" + zumwalt.toString());
 	}
 
 }

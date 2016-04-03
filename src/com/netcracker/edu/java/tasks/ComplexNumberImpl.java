@@ -185,7 +185,7 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public ComplexNumber negate() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ComplexNumberImpl((-1.0)*this.re,(-1.0)*this.im);
 	}
 
 	@Override
