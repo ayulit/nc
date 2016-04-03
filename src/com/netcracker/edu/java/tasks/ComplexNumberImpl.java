@@ -147,13 +147,14 @@ public class ComplexNumberImpl implements ComplexNumber {
 		else if ((this.re == 0) && (this.im != 0))
 		{
 			// image only
-			return ((Math.abs(this.im) == 1.0 ) ? (((this.im < 0)?"-":"") + "i") : (Double.toString(this.im) + "i"));
+			// return ((Math.abs(this.im) == 1.0 ) ? (((this.im < 0)?"-":"") + "i") : (Double.toString(this.im) + "i"));
+			return (Double.toString(this.im) + "i");
 		}
 		
 		return Double.toString(this.re) + 
 				((this.im >= 0 ) ? "+" : "") + 
-				((Math.abs(this.im) == 1.0 ) ? (((this.im < 0)?"-":"") + "i") : (Double.toString(this.im) + "i")); 
-				
+				//((Math.abs(this.im) == 1.0 ) ? (((this.im < 0)?"-":"") + "i") : (Double.toString(this.im) + "i")); 
+				(Double.toString(this.im) + "i");
 		
 	}
 	
