@@ -148,7 +148,7 @@ public class ComplexNumberImpl implements ComplexNumber {
 			return Double.toString(this.im) + "i";
 		}
 		
-		return Double.toString(this.re) + Double.toString(this.im) + "i";	
+		return Double.toString(this.re) + ((this.im >= 0 ) ? "+" : "") + Double.toString(this.im) + "i";	
 		
 	}
 	
@@ -156,6 +156,18 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public int compareTo(ComplexNumber other) {
 		// TODO Auto-generated method stub
+		double x = re*re + im*im;
+		double y = Math.pow(other.getRe(), 2) + Math.pow(other.getIm(), 2);
+		
+		if (x < y)
+		{
+			return -1;
+		}
+		else if (x > y)
+		{
+			return 1;
+		}
+		
 		return 0;
 	}
 

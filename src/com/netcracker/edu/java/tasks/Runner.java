@@ -68,6 +68,21 @@ public class Runner {
 		z.set("0.0");zumwalt.set(z.toString());System.out.println("zumwalt="+zumwalt.toString());
 		z.set("0.33333i");zumwalt.set(z.toString());System.out.println("zumwalt="+zumwalt.toString());
 		
+		System.out.println("----------Compare-----------");
+		
+		ComplexNumber x = new ComplexNumberImpl("2");	
+		ComplexNumber y = new ComplexNumberImpl("3");
+		System.out.println(x.toString() + ((x.compareTo(y) > 0)?" > ":" <= ") + y.toString());
+		
+		x.set("-5+12i");y.set("3-4i");
+		System.out.println(x.toString() + ((x.compareTo(y) > 0)?" > ":" <= ") + y.toString()); // >=
+		x.set("-3-4i");y.set("9+12i");
+		System.out.println(x.toString() + ((x.compareTo(y) > 0)?" > ":" <= ") + y.toString()); // <=
+		x.set("-3+4i");y.set("4-3i");
+		System.out.println(x.toString() + ((x.compareTo(y) == 0)?" = ":" != ") + y.toString()); // =
+		x.set("-3+4i");y.set("4-13i");
+		System.out.println(x.toString() + ((x.compareTo(y) == 0)?" = ":" != ") + y.toString()); // !=
+		
 		
 		
 	}
