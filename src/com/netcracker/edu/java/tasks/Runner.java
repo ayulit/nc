@@ -40,10 +40,19 @@ public class Runner {
 		z.set("+4-i"); printFormatted(z);
 		z.set("-4.3-i"); printFormatted(z);
 		
-		System.out.println("----------------------------");
+		System.out.println("----------Copy-----------");
 		
 		ComplexNumber zumwalt = new ComplexNumberImpl("-5.8+6i");
 		printFormatted(zumwalt);
+		z = zumwalt;
+		System.out.println("'=':Values are" + (zumwalt.equals(z)?" equal. ":" not equal. ") + 
+		           "Refs are" + ((zumwalt==z) ?" equal":" not equal. ")); // equal-equal
+		z = zumwalt.copy();
+		printFormatted(z);
+		System.out.println("'copy':Values are" + (zumwalt.equals(z)?" equal. ":" not equal. ") + 
+				           "Refs are" + ((zumwalt==z) ?" equal":" not equal. ")); //equal-not equal
+		
+		
 	}
 
 }

@@ -115,11 +115,24 @@ public class ComplexNumberImpl implements ComplexNumber {
 		}
 
 	}
+	
+	public boolean equals(Object other){
+		
+		if ((other instanceof ComplexNumber) &&
+			(this.re == ((ComplexNumberImpl)other).re) && 
+			(this.im == ((ComplexNumberImpl)other).im))
+		{
+			return true;
+		}	 
+		
+		return false;		
+	}
 
 	@Override
 	public ComplexNumber copy() {
 		// TODO Auto-generated method stub
-		return null;
+		ComplexNumber copyOfComplexNumber = new ComplexNumberImpl(this.re,this.im);	
+		return copyOfComplexNumber;		
 	}
 
 	@Override
