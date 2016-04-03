@@ -29,25 +29,31 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public double getRe() {
 		// TODO Auto-generated method stub
-		return 0;
+		return re;
 	}
 
 	@Override
 	public double getIm() {
 		// TODO Auto-generated method stub
-		return 0;
+		return im;
 	}
 
 	@Override
 	public boolean isReal() {
 		// TODO Auto-generated method stub
-		return false;
+		if (im == 0) {
+			return true;
+		} 
+		else {
+			return false;	
+		}		
 	}
 
 	@Override
 	public void set(double re, double im) {
 		// TODO Auto-generated method stub
-
+		this.re = re;
+		this.im = im;
 	}
 
 	@Override
