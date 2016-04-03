@@ -1,5 +1,7 @@
 package com.netcracker.edu.java.tasks;
 
+import java.util.Arrays;
+
 public class ComplexNumberImpl implements ComplexNumber {
 	
 	private double re;
@@ -145,10 +147,13 @@ public class ComplexNumberImpl implements ComplexNumber {
 		else if ((this.re == 0) && (this.im != 0))
 		{
 			// image only
-			return Double.toString(this.im) + "i";
+			return ((Math.abs(this.im) == 1.0 ) ? (((this.im < 0)?"-":"") + "i") : (Double.toString(this.im) + "i"));
 		}
 		
-		return Double.toString(this.re) + ((this.im >= 0 ) ? "+" : "") + Double.toString(this.im) + "i";	
+		return Double.toString(this.re) + 
+				((this.im >= 0 ) ? "+" : "") + 
+				((Math.abs(this.im) == 1.0 ) ? (((this.im < 0)?"-":"") + "i") : (Double.toString(this.im) + "i")); 
+				
 		
 	}
 	
@@ -174,7 +179,7 @@ public class ComplexNumberImpl implements ComplexNumber {
 	@Override
 	public void sort(ComplexNumber[] array) {
 		// TODO Auto-generated method stub
-
+		Arrays.sort(array);
 	}
 
 	@Override

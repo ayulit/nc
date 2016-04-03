@@ -6,6 +6,10 @@ public class Runner {
 		System.out.println("z=" + z.getRe() +(z.getIm() < 0 ? "" : "+") + z.getIm() + "i" );		
 	}
 	
+	/**
+	 * @param args
+	 * @throws CloneNotSupportedException
+	 */
 	public static void main(String[] args) throws CloneNotSupportedException {
 
 		System.out.println("Hello, World!");
@@ -83,7 +87,25 @@ public class Runner {
 		x.set("-3+4i");y.set("4-13i");
 		System.out.println(x.toString() + ((x.compareTo(y) == 0)?" = ":" != ") + y.toString()); // !=
 		
+		System.out.println("----------Sort-----------");
 		
+		ComplexNumber[] a = new ComplexNumberImpl[9];
+		a[0] = new ComplexNumberImpl("-5+12i");
+		a[1] = new ComplexNumberImpl("9-12i");
+		a[2] = new ComplexNumberImpl("-3+4i");
+		a[3] = new ComplexNumberImpl("1+i");
+		a[4] = new ComplexNumberImpl("i");
+		a[5] = new ComplexNumberImpl("1-i");
+		a[6] = new ComplexNumberImpl("-i");
+		a[7] = new ComplexNumberImpl("-100.5");
+		a[8] = new ComplexNumberImpl("200");
+
+		x.sort(a);
+		
+		for (int j=0; j < a.length; j++)
+		{
+			System.out.println(a[j].toString());
+		}
 		
 	}
 
